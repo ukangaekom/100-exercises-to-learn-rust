@@ -15,9 +15,9 @@
 //
 // If you get stuck for more than 10 minutes on an exercise, grab a trainer! We're here to help!
 // You can also find solutions to all exercises in the `solutions` git branch.
-fn greeting() -> &'static str {
+fn greeting(name: &str) -> String {
     // TODO: fix me 👇
-    "I'm ready to __!"
+    format!("I {name} is ready to learn rust!")
 }
 
 // Your solutions will be automatically verified by a set of tests.
@@ -41,6 +41,6 @@ mod tests {
 
     #[test]
     fn test_welcome() {
-        assert_eq!(greeting(), "I'm ready to learn Rust!");
+        assert_eq!(greeting("Ekomabasi"), "I'm ready to learn Rust!");
     }
 }
